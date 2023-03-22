@@ -1,25 +1,23 @@
 #include <stdio.h>
 
-int main() 
+int ToFactorialIter(int number)
 {
-
-    printf(ToFactorialRecu(5));
-      return 0;
-}
-
-
-long ToFactorialRecu(int number)
-{
-    unsigned long long fact = 1;
+    int fact = 1;
     if(number < 0 ){
         printf("cannot do factorial on negative number");
     }
     else{
-        for(int i = 0; i <= number; i++){
+        for(int i = 1; i <= number; i++){
             fact *= i;
         }
     }
-    return &fact;
+    return fact;
 }
 
   
+int main() 
+{
+    printf("int: %d", ToFactorialIter(5));
+    return 0;
+}
+
